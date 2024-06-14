@@ -16,13 +16,7 @@ public class DocumentConverter {
                 .size(document.getSize())
                 .status(document.getStatus())
                 .storagePath(document.getStoragePath())
-                .build();
-    }
-
-    public Document dataToEntity(@NotNull DocumentCreationData documentCreationData) {
-        return Document.builder()
-                .name(documentCreationData.getName())
-                .size(documentCreationData.getSize())
+                .createdAt(document.getCreatedAt())
                 .build();
     }
 }

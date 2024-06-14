@@ -5,17 +5,15 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum DocumentStatus {
+public enum UserStatus {
 
-  QUEUED("Queued"),
-  PROCESSING("Processing"),
-  STORED("Stored"),
-  REMOVED("Removed");
+  ACTIVE("Ativo"),
+  CLOSED("Encerrado");
 
   private final String label;
 
   @Override
   public String toString() {
-    return this.name().toLowerCase();
+    return this.getLabel();
   }
 }

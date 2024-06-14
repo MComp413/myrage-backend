@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: myrage
+  datasource:
+    url: "jdbc:${DB_ENGINE:postgresql}://localhost:${DB_PORT:5432}/${DB_NAME:myrage}"
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show_sql: true
+      format_sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: ${GCLOUD_CLIENT_ID}
+            clientSecret: ${GCLOUD_CLIENT_SECRET}
